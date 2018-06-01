@@ -2,6 +2,7 @@ class ThreeDWorld {
     constructor(canvasContainer) {
         // canvas容器
         this.container = canvasContainer || document.body;
+        this.sourceUrl = 'https://raw.githubusercontent.com/youngdro/3DPoints/master/';
         // 创建场景
         this.createScene();
         // 创建灯光
@@ -17,7 +18,7 @@ class ThreeDWorld {
         this.orbitControls.autoRotate = true;
         // 循环更新场景
         this.update();
-        this.sourceUrl = 'https://raw.githubusercontent.com/youngdro/3DPoints/master/';
+
     }
     createScene() {
         this.HEIGHT = window.innerHeight;
