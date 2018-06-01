@@ -10,10 +10,31 @@
 			box-sizing: border-box;
 			overflow: hidden;
 		}
+		#loading{
+			position: absolute;
+			top: 0;
+			left: 0;
+			display: block;
+			height: 100%;
+			width: 100%;
+			color: #fff;
+			font-size: 1rem;
+			vertical-align: middle;
+			text-align: center;
+			background: transparent;
+		}
+		#loading:before{
+			content: '';
+			display: inline-block;
+			height:100%;
+			width: 0;
+			vertical-align:middle;
+		}
 	</style>
 </head>
 <body onload="onLoad()">
 	<div id="world"></div>
+	<div id="loading">加载中...</div>
 	<script type="x-shader/x-vertex" id="vertexshader">
 		attribute float size;
 		attribute vec3 position2;
